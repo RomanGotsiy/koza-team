@@ -23,11 +23,9 @@ body {
   margin: 0 auto 0 auto;
   width: 100%;
   text-align: center;
-  font-size: 18px;
-  font-weight: 200;
+  font-size: 1.8rem;
   background-color: #eee;
-  border-radius: 6px;
-  padding: 5rem 0px;
+  padding: 5rem 0px 0px 0px;
 
   h1 {
     font-size: 6rem;
@@ -52,6 +50,7 @@ nav {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2rem;
   color: #666666;
+  margin-bottom: -3rem;
 
   ul {
     display: table;
@@ -61,10 +60,7 @@ nav {
   li {
     list-style: none;
     display: table-cell;
-    padding: 10px;
-  }
-  li:not(:first-child) {
-    margin-left: 80px;
+    padding: 1rem;
   }
 
   li.active a {
@@ -74,8 +70,8 @@ nav {
   li.active:before {
     content: '•';
     position: relative;
-    top: -12px;
-    left: 5px;
+    top: -1.2rem;
+    left: 0.5rem;
     color: #ef692a;
   }
 
@@ -87,9 +83,57 @@ nav {
   }
 }
 
+.hero-text {
+  vertical-align: middle;
+  padding-bottom:5px;
+
+  div {
+    display: inline-block;
+    line-height: 1.2;
+  }
+}
+
+.hero-img {
+  display: inline-block;
+
+  img {
+    height: 18rem;
+    display: inline-block;
+  }
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+/* styling slick slidre */
+.slick-dots li button:before {
+  font-size: 0.8rem;
+}
+.slick-dots li.slick-active button:before {
+  color: #ea8858;
+  font-size: 1.1rem;
+}
+
+.slick-list {
+  margin-bottom: 5rem;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #C0BCBB;
+}
+
+@media (min-width: 550px) {
+  .hero-text {
+    line-height: 18rem;
+    float: right;
+    text-align: right;
+  }
+
+  .hero-img {
+    float: left;
+  }
 }
