@@ -2,6 +2,8 @@
   "name": "koza-team-github-io",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "Skeleton": "https://github.com/dhg/Skeleton.git#~2.0.2",
+    "normalize.css": "~3.0.2"
   }
 }
