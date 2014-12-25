@@ -36,16 +36,15 @@ gulp.task('jshint', function () {
     .pipe($.jshint.reporter('fail'));
 });
 
-gulp.task('templates', ['styles'],  function() {
+gulp.task('templates', function() {
   var jade = require('gulp-jade');
   gulp.src('./app/*.jade')
-    .pipe(jade())
+    .pipe(jade({pretty: true}))
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('html', ['templates'], function () {
+gulp.task('html', ['templates', 'styles'], function () {
   var assets = $.useref.assets({searchPath: '{.tmp,app}'});
-
   return gulp.src('app/*.html')
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
@@ -76,6 +75,7 @@ gulp.task('extras', function () {
   return gulp.src([
     'app/*.*',
     '!app/*.html',
+    '!app/*.jade',
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
