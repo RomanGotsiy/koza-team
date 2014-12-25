@@ -1,0 +1,10 @@
+@mixin radial-gradient($fromColor, $toColor) {
+  background-color: $toColor;
+  background: -moz-radial-gradient(center, circle cover, $fromColor 0%, $toColor 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $fromColor), color-stop(100%, $toColor));
+  background: -webkit-radial-gradient(center, circle cover, $fromColor 0%, $toColor 100%);
+  background: -o-radial-gradient(center, circle cover, $fromColor 0%, $toColor 100%);
+  background: -ms-radial-gradient(center, circle cover, $fromColor 0%, $toColor 100%);
+  background: radial-gradient(circle at center, $fromColor 0%, $toColor 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fromColor', endColorstr='$toColor', GradientType=1 );
+}
