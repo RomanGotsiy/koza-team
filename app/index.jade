@@ -22,76 +22,9 @@ html
       | to improve your experience.
     <![endif]-->
     section.hero
-      .container
-        .row
-          .column
-            header.logo
-      nav.main-nav
-        ul
-          li.active
-            a(href='#home')  Home 
-          li
-            a(href='#portfolio')  Portfolio 
-          li
-            a(href='#team')  Team 
-          li
-            a(href='#contact')  Contact 
-      .hero-unit
-        .container
-          .slider.single-item
-            .slide
-              .row
-                .one-half.column
-                  .hero-text
-                    div
-                      | Lorem ipsum dolor sit amet,
-                      br
-                      | adipisicing elit. Suspendisse volutpat
-                      br
-                      | velit eget ipsum.
-                .one-half.column
-                  .hero-img
-                    img(src='./images/k_letter.svg')
-            .slide
-              .row
-                .one-half.column
-                  .hero-text
-                    div
-                      | Lorem ipsum dolor sit amet,
-                      br
-                      | adipisicing elit. Suspendisse volutpat
-                      br
-                      | velit eget ipsum.
-                .one-half.column
-                  .hero-img
-                    img(src='./images/k_letter.svg')
-            .slide
-              .row
-                .one-half.column
-                  .hero-text
-                    div
-                      | Lorem ipsum dolor sit amet,
-                      br
-                      | adipisicing elit. Suspendisse volutpat
-                      br
-                      | velit eget ipsum.
-                .one-half.column
-                  .hero-img
-                    img(src='./images/k_letter.svg')
-            .slide
-              .row
-                .one-half.column
-                  .hero-text
-                    div
-                      | Lorem ipsum dolor sit amet,
-                      br
-                      | adipisicing elit. Suspendisse volutpat
-                      br
-                      | velit eget ipsum.
-                .one-half.column
-                  .hero-img
-                    img(src='./images/k_letter.svg')
-
+      include sections/home/home.jade
+    section.portfolio
+      include sections/projects/projects.jade
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

@@ -1,0 +1,101 @@
+section.hero {
+  margin-bottom: 20rem;
+}
+.logo {
+  display: block;
+  max-width: 40rem;
+  height: 20rem;
+  background: url(../images/koza_logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem auto 8rem auto;
+}
+
+.hero-unit {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 5rem 0 0 0;
+
+  @include radial-gradient(rgba(255,255,255,1), $background-color);
+
+  h1 {
+    font-size: 6rem;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+}
+
+.main-nav {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto;
+
+  ul {
+    display: table;
+    width: 100%;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    display: table-cell;
+    padding: 1rem;
+
+    &.active {
+      a {
+        color: $active-color;
+      }
+
+      &:before {
+        content: '•';
+        position: relative;
+        top: -1.2rem;
+        left: 0.5rem;
+        color: $contrast-color;
+      }
+    }
+  }
+
+  @media (min-width: 1100px) {
+    width: 60%;
+  }
+
+  @media (min-width: 550) {
+    width: 80%;
+  }
+}
+
+.hero-text {
+  vertical-align: middle;
+  padding-bottom:5px;
+  line-height: $hero-text-height;
+
+  div {
+    display: inline-block;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 550px) {
+    float: right;
+    text-align: right;
+  }
+}
+
+.hero-img {
+  display: inline-block;
+
+  img {
+    height: $hero-text-height;
+    display: inline-block;
+  }
+
+  @media (min-width: 550px) {
+    float: left;
+  }
+}
+
+.slick-list {
+  margin-bottom: 5rem;
+}

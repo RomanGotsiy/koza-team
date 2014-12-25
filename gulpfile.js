@@ -15,6 +15,20 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('.tmp/styles'));
 });
 
+gulp.task('injectSass', function () {
+  var inject = require('gulp-inject');
+  return gulp.src('app/styles/main.scss')
+    .pipe(inject(gulp.src(['app/sections/**/*.scss'], {read: false}), {
+      starttag: '// injector',
+      endtag: '// endinjector',
+      transform: function (filePath) {
+        filePath = filePath.replace('/app/', '');
+        return '@import \'../' + filePath + '\';';
+      }
+    }))
+    .pipe(gulp.dest('app/styles'));
+});
+
 gulp.task('jshint', function () {
   return gulp.src('app/scripts/**/*.js')
     .pipe($.jshint())
@@ -110,6 +124,7 @@ gulp.task('watch', ['connect'], function () {
   $.livereload.listen();
 
   // watch for changes
+  // FIXME change gulp.watch to gulp-watch for watching new or deleted files
   gulp.watch([
     'app/*.jade',
     'app/*.html',
@@ -118,7 +133,8 @@ gulp.task('watch', ['connect'], function () {
     'app/images/**/*'
   ]).on('change', $.livereload.changed);
 
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/styles/**/*.scss', ['styles', 'injectSass']);
+  gulp.watch('app/sections/**/*.scss', ['injectSass']);
   gulp.watch('app/**/*.jade', ['templates']);
   gulp.watch('bower.json', ['wiredep']);
 });

@@ -1,0 +1,30 @@
+$project-header-radius: 20rem;
+
+.project {
+  display: block;
+  height: 40rem;
+}
+
+.project-marta {
+  @extend .project;
+
+  background: url('../images/project_we.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.project-header {
+  position: relative;
+  width: $project-header-radius;
+  height: $project-header-radius;
+  line-height: $project-header-radius;
+  color: #fff;
+  font-size: 2rem;
+  background-color: $contrast-color;
+  text-align: center;
+  top: -$project-header-radius/2;
+  left: 50%;
+  margin-left: -$project-header-radius/2;
+  border-radius: $project-header-radius/2;
+}
