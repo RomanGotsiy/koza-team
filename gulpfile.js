@@ -22,7 +22,14 @@ gulp.task('jshint', function () {
     .pipe($.jshint.reporter('fail'));
 });
 
-gulp.task('html', ['styles'], function () {
+gulp.task('templates', ['styles'],  function() {
+  var jade = require('gulp-jade');
+  gulp.src('./app/*.jade')
+    .pipe(jade())
+    .pipe(gulp.dest('app'));
+});
+
+gulp.task('html', ['templates'], function () {
   var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
   return gulp.src('app/*.html')
@@ -63,7 +70,7 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('connect', ['styles'], function () {
+gulp.task('connect', ['styles', 'templates'], function () {
   var serveStatic = require('serve-static');
   var serveIndex = require('serve-index');
   var app = require('connect')()
@@ -104,6 +111,7 @@ gulp.task('watch', ['connect'], function () {
 
   // watch for changes
   gulp.watch([
+    'app/*.jade',
     'app/*.html',
     '.tmp/styles/**/*.css',
     'app/scripts/**/*.js',
@@ -111,6 +119,7 @@ gulp.task('watch', ['connect'], function () {
   ]).on('change', $.livereload.changed);
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/**/*.jade', ['templates']);
   gulp.watch('bower.json', ['wiredep']);
 });
 

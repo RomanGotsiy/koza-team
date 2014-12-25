@@ -1,0 +1,112 @@
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1, minimal-ui')
+    title KOZA team
+    //- build:css styles/vendor.css
+    //- bower:css
+    link(rel='stylesheet', href='../bower_components/normalize.css/normalize.css')
+    link(rel='stylesheet', href='../bower_components/Skeleton/css/skeleton.css')
+    //- endbower
+    //- endbuild
+    //- build:css styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    //- endbuild
+  body
+    <!--[if lt IE 8]>
+    p.browsehappy
+      | You are using an <strong>outdated</strong> browser.
+      | Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      | to improve your experience.
+    <![endif]-->
+    section.hero
+      .container
+        .row
+          .column
+            header.logo
+      nav.main-nav
+        ul
+          li.active
+            a(href='#home')  Home 
+          li
+            a(href='#portfolio')  Portfolio 
+          li
+            a(href='#team')  Team 
+          li
+            a(href='#contact')  Contact 
+      .hero-unit
+        .container
+          .slider.single-item
+            .slide
+              .row
+                .one-half.column
+                  .hero-text
+                    div
+                      | Lorem ipsum dolor sit amet,
+                      br
+                      | adipisicing elit. Suspendisse volutpat
+                      br
+                      | velit eget ipsum.
+                .one-half.column
+                  .hero-img
+                    img(src='./images/k_letter.svg')
+            .slide
+              .row
+                .one-half.column
+                  .hero-text
+                    div
+                      | Lorem ipsum dolor sit amet,
+                      br
+                      | adipisicing elit. Suspendisse volutpat
+                      br
+                      | velit eget ipsum.
+                .one-half.column
+                  .hero-img
+                    img(src='./images/k_letter.svg')
+            .slide
+              .row
+                .one-half.column
+                  .hero-text
+                    div
+                      | Lorem ipsum dolor sit amet,
+                      br
+                      | adipisicing elit. Suspendisse volutpat
+                      br
+                      | velit eget ipsum.
+                .one-half.column
+                  .hero-img
+                    img(src='./images/k_letter.svg')
+            .slide
+              .row
+                .one-half.column
+                  .hero-text
+                    div
+                      | Lorem ipsum dolor sit amet,
+                      br
+                      | adipisicing elit. Suspendisse volutpat
+                      br
+                      | velit eget ipsum.
+                .one-half.column
+                  .hero-img
+                    img(src='./images/k_letter.svg')
+
+    script.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+
+    //- build:js scripts/vendor.js
+    //- bower:js
+    script(src="../bower_components/jquery/dist/jquery.js")
+    script(src="../bower_components/slick.js/slick/slick.min.js")
+    //- endbower
+    //- endbuild
+
+    //- build:js scripts/main.js
+    script(src="scripts/main.js")
+    //- endbuild
