@@ -46,14 +46,14 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e1e1', GradientType=1 );
 }
 
-nav {
+nav.main-nav {
   display: block;
   width: 100%;
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2rem;
   color: #666666;
-  margin-bottom: -3rem;
+  margin: 0 auto;
 
   ul {
     display: table;
@@ -138,5 +138,9 @@ nav {
 
   .hero-img {
     float: left;
+  }
+
+  nav.main-nav {
+    width: 80%;
   }
 }
