@@ -39,7 +39,7 @@ gulp.task('jshint', function () {
 gulp.task('templates', function() {
   var jade = require('gulp-jade');
   gulp.src('./app/*.jade')
-    .pipe(jade({pretty: true}))
+    .pipe(jade())
     .pipe(gulp.dest('app'));
 });
 
@@ -124,7 +124,6 @@ gulp.task('watch', ['connect'], function () {
   $.livereload.listen();
 
   // watch for changes
-  // FIXME change gulp.watch to gulp-watch for watching new or deleted files
   gulp.watch([
     'app/*.jade',
     'app/*.html',
@@ -133,8 +132,8 @@ gulp.task('watch', ['connect'], function () {
     'app/images/**/*'
   ]).on('change', $.livereload.changed);
 
-  gulp.watch('app/styles/**/*.scss', ['styles', 'injectSass']);
-  gulp.watch('app/sections/**/*.scss', ['injectSass']);
+  gulp.watch('app/**/*.scss', ['styles', 'injectSass']);
+  //gulp.watch('app/sections/**/*.scss', ['injectSass']);
   gulp.watch('app/**/*.jade', ['templates']);
   gulp.watch('bower.json', ['wiredep']);
 });
