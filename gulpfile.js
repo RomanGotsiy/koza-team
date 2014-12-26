@@ -39,7 +39,7 @@ gulp.task('jshint', function () {
 gulp.task('templates', function() {
   var jade = require('gulp-jade');
   gulp.src('./app/*.jade')
-    .pipe(jade())
+    .pipe(jade({pretty: true}))
     .pipe(gulp.dest('app'));
 });
 
