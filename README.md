@@ -1,2 +1,4 @@
-koza-team.github.io
+KOZA-team official web-site
 ===================
+
+http://koza-team.com
