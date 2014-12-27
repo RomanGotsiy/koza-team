@@ -8,5 +8,12 @@
 			});
 
       $('#main_nav').sticky({topSpacing:0});
+
+      $.scrollIt({
+        /*upKey: 38,
+        downKey: 40,*/
+        easing: 'easy-in',
+        scrollTime: 600
+      });
 		});
 }());

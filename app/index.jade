@@ -21,9 +21,9 @@ html
       | Please <a href="http://browsehappy.com/">upgrade your browser</a>
       | to improve your experience.
     <![endif]-->
-    section.hero
+    section.hero(data-scroll-index="0")
       include sections/home/home.jade
-    section.portfolio
+    section.portfolio(data-scroll-index="1")
       include sections/projects/projects.jade
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -38,6 +38,7 @@ html
     script(src="../bower_components/jquery/dist/jquery.js")
     script(src="../bower_components/slick.js/slick/slick.min.js")
     script(src="../bower_components/jquery-sticky/jquery.sticky.js")
+    script(src="../bower_components/ScrollIt/scrollIt.js")
     // endbower
     // endbuild
 

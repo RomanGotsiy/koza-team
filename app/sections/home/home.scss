@@ -1,5 +1,5 @@
 section.hero {
-  margin-bottom: 20rem;
+  padding-bottom: 20rem;
 }
 .logo {
   display: block;
@@ -51,19 +51,16 @@ section.hero {
     list-style: none;
     display: table-cell;
     padding: 1rem;
+  }
 
-    &.active {
-      a {
-        color: $active-color;
-      }
+  a.active {
+    color: $active-color;
 
-      &:before {
-        content: '•';
-        position: relative;
-        top: -1.2rem;
-        left: 0.5rem;
-        color: $contrast-color;
-      }
+    &:before {
+      content: '•';
+      position: relative;
+      top: -1.2rem;
+      color: $contrast-color;
     }
   }
 
