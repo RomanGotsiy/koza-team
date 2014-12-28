@@ -1,8 +1,9 @@
 $project-header-radius: 10rem;
+$project-inprogress-radius: 5rem;
 
 .project {
   display: block;
-  height: 40rem;
+  min-height: 40rem;
   color: #fff;
   position: relative;
 
@@ -47,22 +48,29 @@ $project-header-radius: 10rem;
   background-image: url('../images/project_marta.png');
 }
 
-.project-header {
-  position: absolute;
-  width: $project-header-radius*2;
-  height: $project-header-radius*2;
-  line-height: $project-header-radius*2;
-  color: #fff;
-  font-size: 2rem;
-  background-color: $contrast-color;
-  text-align: center;
-  top: -$project-header-radius;
-  margin-bottom: -$project-header-radius;
-  left: 50%;
-  margin-left: -$project-header-radius;
-  border-radius: $project-header-radius;
+.project-olja {
+  @extend .project;
+
+  background-image: url('../images/project_marta.png');
 }
 
+.project-header {
+  @include circle($project-header-radius, $contrast-color);
+  position: absolute;
+  top: -$project-header-radius;
+
+  color: #fff;
+  font-size: 2rem;
+}
+
+
+.project-inprogress {
+  @include circle($project-inprogress-radius, $contrast-color);
+  top: 5rem;
+
+  color: #fff;
+  font-size: 2rem;
+}
 .project-name {
   font-size: 4.5rem;
   margin-top: $project-header-radius;
@@ -83,4 +91,10 @@ $project-header-radius: 10rem;
   @media (max-width: 720px) {
     width: 100%;
   }
+}
+
+.release-date {
+  @extend .project-description;
+  font-weight: normal;
+  font-style: italic;
 }

@@ -8,3 +8,19 @@
   background: radial-gradient(circle at center, $fromColor 0%, $toColor 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fromColor', endColorstr='$toColor', GradientType=1 );
 }
+
+@mixin circle($radius, $bg-color) {
+  position: relative;
+  width: $radius*2;
+  height: $radius*2;
+  left: 50%;
+  line-height: $radius*2;
+
+  margin-bottom: -$radius;
+  margin-left: -$radius;
+  margin-bottom: -$radius;
+  border-radius: $radius;
+
+  background-color: $bg-color;
+  text-align: center;
+}
