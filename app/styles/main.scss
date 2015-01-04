@@ -10,13 +10,16 @@ $primary-color: #666;
 $active-color: #333;
 $contrast-color: #ef692a;
 
-$hero-text-height: 18rem;
+$slider-text-height: 18rem;
+
+$section-header-radius: 10rem;
 
 @import 'slick';
 
 // injector
 @import '../sections/home/home.scss';
 @import '../sections/projects/projects.scss';
+@import '../sections/team/team.scss';
 // endinjector
 
 body {
@@ -42,12 +45,19 @@ a:hover, a:active {
   padding: 0.2em 0;
 }
 
-section:not(:first-child) {
-  padding-top: $project-header-radius;
-}
 
 section:not(:last-child) {
   padding-bottom: 10rem;
+}
+
+.section-header {
+  @include circle($section-header-radius, $contrast-color);
+  //position: absolute;
+  top: 0;
+  z-index: 100;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: lighter;
 }
 
 ul {

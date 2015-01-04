@@ -1,3 +1,7 @@
+$slider-vmargin: 12rem;
+$slider-height: 18rem;
+$slider-button-height: 10rem;
+
 .logo {
   display: block;
   max-width: 35rem;
@@ -6,26 +10,6 @@
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
-}
-
-.main-slider {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  font-size: 1.8rem;
-  padding: 0;
-
-  @include radial-gradient(rgba(255,255,255,1), $background-color);
-
-  h1 {
-    font-size: 6rem;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-
-  @media (min-width: 550px) {
-    padding-top: 10rem;
-  }
 }
 
 .main-nav {
@@ -80,16 +64,37 @@
   }
 }
 
+
+.main-slider {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 0;
+
+  @include radial-gradient(rgba(255,255,255,1), $background-color);
+
+  h1 {
+    font-size: 6rem;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  @media (min-width: 550px) {
+    padding-top: $slider-vmargin;
+  }
+}
+
 .hero-text {
   display: table;
   width: 100%;
-  height: $hero-text-height;
+  height: $slider-text-height;
   padding-bottom: 0;
 
   @media (min-width: 550px) {
     float: right;
     text-align: right;
-    padding-bottom: 6rem;
+    padding-bottom: $slider-vmargin/2;
   }
 
   div {
@@ -107,7 +112,7 @@
   display: inline-block;
 
   img {
-    height: $hero-text-height;
+    height: $slider-text-height;
     display: inline-block;
   }
 
@@ -118,4 +123,39 @@
 
 .slick-list {
   margin-bottom: 5rem;
+}
+
+.slider-prev, .slider-next {
+  display: block;
+  height: $slider-button-height;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  width: 4rem;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  line {
+    stroke: $primary-color;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+
+  &:hover line {
+    stroke: $contrast-color;
+  }
+
+  @media (min-width: 550px) {
+    margin-top: -($slider-button-height/2 + ($slider-vmargin/4));
+  }
+}
+
+.slider-prev {
+  left: -25px;
+}
+
+.slider-next {
+  right: -25px;
 }
