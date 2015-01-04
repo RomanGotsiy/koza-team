@@ -1,23 +1,19 @@
-section.hero {
-  padding-bottom: 20rem;
-}
 .logo {
   display: block;
-  max-width: 40rem;
-  height: 20rem;
+  max-width: 35rem;
+  height: 50vh;
   background: url(../images/koza_logo.svg);
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 1rem auto 8rem auto;
+  margin: 0 auto;
 }
 
-.hero-unit {
+.main-slider {
   margin: 0 auto;
   width: 100%;
   text-align: center;
   font-size: 1.8rem;
-  padding: 5rem 0 0 0;
+  padding: 0;
 
   @include radial-gradient(rgba(255,255,255,1), $background-color);
 
@@ -25,6 +21,10 @@ section.hero {
     font-size: 6rem;
     line-height: 1;
     letter-spacing: -1px;
+  }
+
+  @media (min-width: 550px) {
+    padding-top: 10rem;
   }
 }
 
@@ -58,6 +58,7 @@ section.hero {
 
     &:before {
       content: '•';
+      font-family: sans-serif;
       position: relative;
       top: -1.2rem;
       color: $contrast-color;
@@ -67,31 +68,38 @@ section.hero {
   }
 
   @media (min-width: 550px) {
-    $nav-width: 80%;
+    $nav-width: 60%;
     width: $nav-width;
     padding: 0 (100% - $nav-width)/2;
   }
 
   @media (min-width: 1100px) {
-    $nav-width: 60%;
+    $nav-width: 40%;
     width: $nav-width;
     padding: 0 (100% - $nav-width)/2;
   }
 }
 
 .hero-text {
-  vertical-align: middle;
-  padding-bottom:5px;
-  line-height: $hero-text-height;
-
-  div {
-    display: inline-block;
-    line-height: 1.2;
-  }
+  display: table;
+  width: 100%;
+  height: $hero-text-height;
+  padding-bottom: 0;
 
   @media (min-width: 550px) {
     float: right;
     text-align: right;
+    padding-bottom: 6rem;
+  }
+
+  div {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1.2;
+
+    @media (min-width: 550px) {
+      padding-left: 25%;
+    }
   }
 }
 
