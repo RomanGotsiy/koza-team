@@ -1,0 +1,64 @@
+$contact-fb-height: 25rem;
+
+.contact-fb {
+  background-image: url('../images/follow_facebook.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: right;
+
+  height: $contact-fb-height;
+  cursor: pointer;
+
+  &:not(:hover):before {
+    content: "";
+    left: 0;
+    z-index: 0;
+    position: relative;
+    display: block;
+    height: $contact-fb-height;
+    margin-bottom: -$contact-fb-height;
+    width: 100%;
+    background-color: #282928;
+    opacity: 0.55;
+  }
+
+}
+
+.follow-us {
+  color: #ffffff;
+  margin-top: $section-header-radius;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: lighter;
+
+  strong {
+    font-size: 3.2rem;
+  }
+}
+
+.contact-us {
+  margin: 10rem 0;
+  text-align: center;
+  color: $active-color;
+
+  @media (min-width: 550px) {
+    margin: 15rem 0;
+  }
+}
+
+.email-header {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.email {
+  font-size: 1.8rem;
+  font-weight: lighter;
+}
+
+.footer {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
