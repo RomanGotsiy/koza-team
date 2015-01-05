@@ -18,8 +18,8 @@ $section-header-radius: 10rem;
 
 // injector
 @import '../sections/contact/contact.scss';
-@import '../sections/home/home.scss';
 @import '../sections/projects/projects.scss';
+@import '../sections/home/home.scss';
 @import '../sections/team/team.scss';
 // endinjector
 
@@ -61,6 +61,10 @@ a:hover, a:active {
 section {
   min-height: 100vh;
   position: relative;
+  
+  &:not(:first-child) {
+    margin-top:5rem;
+  }
 }
 
 .section-header {
