@@ -12,7 +12,7 @@ $member-height: 20rem;
 
 .member {
 
-  &:not(:hover):before {
+  &:before {
     content: "";
     left: 0;
     z-index: 0;
@@ -22,15 +22,26 @@ $member-height: 20rem;
     height: 100%;
     margin-bottom: -$member-height;
     background-color: #282928;
+    opacity: 0.1;
+    transition: all 0.3s ease-out;
+  }
+
+  &:not(:hover):before {
     opacity: 0.55;
+    margin-bottom: -$member-height - 1rem;
   }
 
   @media (min-width: 1600px) {
     $member-height: 25rem;
     height: $member-height;
 
-    &:not(:hover):before {
+    &:before {
       margin-bottom: -$member-height;
+    }
+
+    &:not(:hover):before {
+      opacity: 0.55;
+      margin-bottom: -$member-height - 1rem;
     }
   }
 

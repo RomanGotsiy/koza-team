@@ -10,7 +10,7 @@ $contact-fb-height: 25rem;
   height: $contact-fb-height;
   cursor: pointer;
 
-  &:not(:hover):before {
+  &:before {
     content: "";
     left: 0;
     z-index: 0;
@@ -20,9 +20,13 @@ $contact-fb-height: 25rem;
     margin-bottom: -$contact-fb-height;
     width: 100%;
     background-color: #282928;
-    opacity: 0.55;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
   }
 
+  &:not(:hover):before {
+    opacity: 0.55;
+  }
 }
 
 .follow-us {
