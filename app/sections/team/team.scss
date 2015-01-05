@@ -25,6 +25,15 @@ $member-height: 20rem;
     opacity: 0.55;
   }
 
+  @media (min-width: 1600px) {
+    $member-height: 25rem;
+    height: $member-height;
+
+    &:not(:hover):before {
+      margin-bottom: -$member-height;
+    }
+  }
+
   cursor: pointer;
   height: $member-height;
   background-size: cover;
@@ -70,10 +79,25 @@ $member-height: 20rem;
 }
 
 .member-info {
-  padding-left: 5rem;
   text-align: right;
 
   @media (min-width: 550px) {
+    text-align: center;
+    padding-left: 0rem;
+    margin-left: 0% !important;
+    width: 100% !important;
+  }
+
+  @media (min-width: 720px) {
+    padding-left: 0rem;
     text-align: left;
+    margin-left: 30% !important;
+    width: 70% !important;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 5rem;
+    margin-left: 50% !important;
+    width: 50% !important;
   }
 }

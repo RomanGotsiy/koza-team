@@ -5,7 +5,7 @@
 @import 'mixins';
 
 $font-stack: 'Fira Sans', sans-serif;
-$background-color: rgba(225, 225, 225, 1);
+$background-color: #e2e1e2;
 $primary-color: #666;
 $active-color: #333;
 $contrast-color: #ef692a;
@@ -22,6 +22,17 @@ $section-header-radius: 10rem;
 @import '../sections/projects/projects.scss';
 @import '../sections/team/team.scss';
 // endinjector
+
+html {
+  font-size: 50%;
+
+  @media (min-width: 550px) {
+    font-size: 62.5%
+  }
+  @media (min-width: 2100px) {
+    font-size: 100%
+  }
+}
 
 body {
   background: $background-color;
@@ -47,8 +58,9 @@ a:hover, a:active {
 }
 
 
-section:not(:last-child) {
-  padding-bottom: 10rem;
+section {
+  min-height: 100vh;
+  position: relative;
 }
 
 .section-header {
@@ -67,4 +79,8 @@ ul {
 
 strong {
   font-weight: 500;
+}
+
+.container {
+  max-width: 100%;
 }

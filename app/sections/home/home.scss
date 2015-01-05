@@ -4,8 +4,8 @@ $slider-button-height: 10rem;
 
 .logo {
   display: block;
-  max-width: 35rem;
-  height: 50vh;
+  max-width: 40rem;
+  height: 35vh;
   background: url(../images/koza_logo.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -51,7 +51,7 @@ $slider-button-height: 10rem;
     }
   }
 
-  @media (min-width: 550px) {
+  @media (min-width: 720px) {
     $nav-width: 60%;
     width: $nav-width;
     padding: 0 (100% - $nav-width)/2;
