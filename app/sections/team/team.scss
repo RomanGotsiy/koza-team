@@ -28,7 +28,6 @@ $member-height: 20rem;
 
   &:not(:hover):before {
     opacity: 0.55;
-    margin-bottom: -$member-height - 1rem;
   }
 
   @media (min-width: 1600px) {
@@ -41,7 +40,6 @@ $member-height: 20rem;
 
     &:not(:hover):before {
       opacity: 0.55;
-      margin-bottom: -$member-height - 1rem;
     }
   }
 
@@ -53,10 +51,9 @@ $member-height: 20rem;
   color: #ffffff;
 
   .name {
-    margin-top: 5rem;
     font-size: 3rem;
     line-height: 0.8;
-    font-weight: lighter;
+    font-weight: 200;
   }
   .surname {
     font-size: 3rem;
@@ -89,7 +86,14 @@ $member-height: 20rem;
   }
 }
 
+.cell-vertical {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
 .member-info {
+  display: table;
+  height: $member-height;
   text-align: right;
 
   @media (min-width: 550px) {
@@ -110,5 +114,10 @@ $member-height: 20rem;
     padding-left: 5rem;
     margin-left: 50% !important;
     width: 50% !important;
+  }
+
+  @media (min-width: 1600px) {
+    $member-height: 25rem;
+    height: $member-height;
   }
 }

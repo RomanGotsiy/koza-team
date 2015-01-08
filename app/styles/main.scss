@@ -1,7 +1,7 @@
 // bower:scss
 // endbower
 
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,400italic&subset=cyrillic,latin);
+//@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,400italic&subset=cyrillic,latin);
 @import 'mixins';
 
 $font-stack: 'Fira Sans', sans-serif;
@@ -17,20 +17,21 @@ $section-header-radius: 10rem;
 @import 'slick';
 
 // injector
-@import '../sections/contact/contact.scss';
-@import '../sections/projects/projects.scss';
 @import '../sections/home/home.scss';
+@import '../sections/contact/contact.scss';
 @import '../sections/team/team.scss';
+@import '../sections/projects/projects.scss';
 // endinjector
 
 html {
   font-size: 50%;
+  height: 100%;
 
   @media (min-width: 550px) {
     font-size: 62.5%
   }
   @media (min-width: 2100px) {
-    font-size: 100%
+    font-size: 70%
   }
 }
 
@@ -43,7 +44,7 @@ body {
 a {
   text-decoration: none;
   color: $primary-color;
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 a:hover, a:active {
@@ -61,7 +62,7 @@ a:hover, a:active {
 section {
   min-height: 100vh;
   position: relative;
-  
+
   &:not(:first-child) {
     margin-top:5rem;
   }
@@ -74,7 +75,7 @@ section {
   z-index: 100;
   color: #fff;
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 ul {

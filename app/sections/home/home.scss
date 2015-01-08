@@ -86,6 +86,7 @@ $slider-button-height: 10rem;
 }
 
 .hero-text {
+  font-weight: 200;
   display: table;
   width: 100%;
   height: $slider-text-height;
@@ -95,6 +96,16 @@ $slider-button-height: 10rem;
     float: right;
     text-align: right;
     padding-bottom: $slider-vmargin/2;
+
+    .inverse-slide & {
+      float: left;
+      text-align: left;
+
+      div {
+        padding-left: 0%;
+        padding-right: 25%;
+      }
+    }
   }
 
   div {
@@ -104,7 +115,15 @@ $slider-button-height: 10rem;
 
     @media (min-width: 550px) {
       padding-left: 25%;
+      padding-right: 0%;
     }
+  }
+}
+
+.inverse-slide:first-child {
+  @media (max-width: 551px) {
+    margin-bottom: -$slider-text-height*2;
+    margin-top: $slider-text-height;
   }
 }
 
@@ -118,6 +137,9 @@ $slider-button-height: 10rem;
 
   @media (min-width: 550px) {
     float: left;
+    .inverse-slide & {
+      float: right;
+    }
   }
 }
 
