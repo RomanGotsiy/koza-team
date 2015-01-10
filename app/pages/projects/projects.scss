@@ -48,7 +48,7 @@ $button-back-height: 8rem;
   cursor: pointer;
   width: 4rem;
   margin-left: 1.5rem;
-  transition: left 0.3s linear;
+  transition: left 0.5s;
 
   .opened & {
     left: 0px;

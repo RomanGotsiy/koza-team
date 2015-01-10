@@ -3,6 +3,6 @@ dist
 .tmp
 .sass-cache
 bower_components
-app/index.html
+app/*.html
 
 .directory

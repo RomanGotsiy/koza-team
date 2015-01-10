@@ -18,13 +18,17 @@
       });
 
       var targets = {
-        default: function (request, options) {
-          $('.overpage').removeClass('opened');
+        default: function () {
+          setTimeout(function() {
+            $('.overpage').removeClass('opened');
+          }, 50);
           $('body').removeClass('overpaged');
         },
-        project: function (request, options) {
+        project: function (request) {
           var proj = request.namedParams.projname;
-          $('.overpage[for="'+proj+'"]').addClass('opened');
+          setTimeout(function() {
+            $('.overpage[for="'+proj+'"]').addClass('opened');
+          }, 50);
           $('body').addClass('overpaged');
         },
       };
