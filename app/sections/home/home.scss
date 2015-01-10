@@ -72,7 +72,7 @@ $slider-button-height: 10rem;
   font-size: 1.8rem;
   padding: 0;
 
-  @include radial-gradient(rgba(255,255,255,1), $background-color);
+  @include radial-gradient(#f1f0ef, $background-color);
 
   h1 {
     font-size: 6rem;
@@ -86,7 +86,7 @@ $slider-button-height: 10rem;
 }
 
 .hero-text {
-  font-weight: 200;
+  font-weight: 300;
   display: table;
   width: 100%;
   height: $slider-text-height;

@@ -10,22 +10,12 @@ $contact-fb-height: 25rem;
   height: $contact-fb-height;
   cursor: pointer;
 
-  &:before {
-    content: "";
-    left: 0;
-    z-index: 0;
-    position: relative;
-    display: block;
-    height: $contact-fb-height;
-    margin-bottom: -$contact-fb-height;
-    width: 100%;
-    background-color: #282928;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-  }
+  @include hover-fade();
 
-  &:not(:hover):before {
-    opacity: 0.55;
+  &:hover {
+    .moving-element {
+      padding-top: 0.5rem;
+    }
   }
 }
 
@@ -34,7 +24,7 @@ $contact-fb-height: 25rem;
   margin-top: $section-header-radius;
   font-size: 2.5rem;
   line-height: 1;
-  font-weight: lighter;
+  font-weight: 300;
 
   strong {
     font-size: 3.2rem;
@@ -58,7 +48,7 @@ $contact-fb-height: 25rem;
 
 .email {
   font-size: 1.8rem;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .footer {

@@ -19,8 +19,8 @@ $section-header-radius: 10rem;
 // injector
 @import '../sections/home/home.scss';
 @import '../sections/contact/contact.scss';
-@import '../sections/team/team.scss';
 @import '../sections/projects/projects.scss';
+@import '../sections/team/team.scss';
 // endinjector
 
 html {
@@ -44,7 +44,7 @@ body {
 a {
   text-decoration: none;
   color: $primary-color;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 a:hover, a:active {
@@ -75,7 +75,7 @@ section {
   z-index: 100;
   color: #fff;
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 ul {
@@ -88,4 +88,8 @@ strong {
 
 .container {
   max-width: 100%;
+}
+
+.moving-element {
+  transition: all 0.3s linear;
 }

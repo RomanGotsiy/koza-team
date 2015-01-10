@@ -3,28 +3,19 @@ $project-inprogress-radius: 6rem;
 .project {
   display: block;
   min-height: 40rem;
-  color: #fff;
-  position: relative;
+  color: #eee;
 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
-  &:before {
-    content: "";
-    left: 0;
-    z-index: 0;
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background-color: #282928;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-  }
+  @include hover-fade();
 
-  &:not(:hover):before {
-    opacity: 0.55;
+  &:hover {
+    .moving-element {
+      margin-top: $section-header-radius + 0.3rem;
+    }
   }
 
   &.project-text-left {
@@ -64,20 +55,21 @@ $project-inprogress-radius: 6rem;
 
   color: #fff;
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .project-name {
   font-size: 4.5rem;
   margin-top: $section-header-radius;
-  font-weight: 200;
+  font-weight: 300;
+  transition: all ease-out 0.3s;
 }
 
 .project-description {
   display: inline-block;
   font-size: 2.4rem;
   line-height: 1.25;
-  font-weight: 200;
+  font-weight: 300;
   width: 50%;
 
   @media (max-width: 720px) {

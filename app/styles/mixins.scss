@@ -24,3 +24,25 @@
   background-color: $bg-color;
   text-align: center;
 }
+
+@mixin hover-fade() {
+
+  position: relative;
+
+  &:before {
+    content: "";
+    left: 0;
+    z-index: 0;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #282928;
+    opacity: 0.33;
+    transition: all 0.3s ease-out;
+  }
+
+  &:not(:hover):before {
+    opacity: 0.60;
+  }
+}
