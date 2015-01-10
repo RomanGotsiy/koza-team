@@ -18,7 +18,7 @@ gulp.task('styles', function () {
 gulp.task('injectSass', function () {
   var inject = require('gulp-inject');
   return gulp.src('app/styles/main.scss')
-    .pipe(inject(gulp.src(['app/sections/**/*.scss'], {read: false}), {
+    .pipe(inject(gulp.src(['app/sections/**/*.scss', 'app/pages/**/*.scss'], {read: false}), {
       starttag: '// injector',
       endtag: '// endinjector',
       transform: function (filePath) {

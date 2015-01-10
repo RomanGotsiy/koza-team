@@ -21,6 +21,7 @@ $section-header-radius: 10rem;
 @import '../sections/contact/contact.scss';
 @import '../sections/projects/projects.scss';
 @import '../sections/team/team.scss';
+@import '../pages/projects/projects.scss';
 // endinjector
 
 html {
@@ -39,6 +40,10 @@ body {
   background: $background-color;
   font-family: $font-stack;
   color: $primary-color;
+
+  &.overpaged {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -92,4 +97,23 @@ strong {
 
 .moving-element {
   transition: all 0.3s linear;
+}
+
+.overpage {
+  text-align: center;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 100%;
+  background-color: #fff;
+  z-index: 1050;
+  transition: left 0.3s linear;
+  padding-top: 10rem;
+
+  &.opened {
+    display: block;
+    left: 0;
+  }
 }

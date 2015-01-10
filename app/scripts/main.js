@@ -16,5 +16,32 @@
         easing: 'easy-in',
         scrollTime: 600,
       });
+
+      var targets = {
+        default: function (request, options) {
+          $('.overpage').removeClass('opened');
+          $('body').removeClass('overpaged');
+        },
+        project: function (request, options) {
+          var proj = request.namedParams.projname;
+          $('.overpage[for="'+proj+'"]').addClass('opened');
+          $('body').addClass('overpaged');
+        },
+      };
+
+      Aviator.pushStateEnabled = false;
+      Aviator.setRoutes({
+        '/': {
+          target: targets,
+          '/': 'default'
+        },
+        '/projects': {
+          target: targets,
+          '/:projname': 'project',
+        }
+      });
+
+      Aviator.dispatch();
+
 		});
 }());
