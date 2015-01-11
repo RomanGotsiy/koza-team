@@ -2,10 +2,12 @@ doctype
 html
   head
     meta(charset='utf-8')
-    meta(name='description', content='')
+    meta(name='description', property='og:description', content='Group of artists working together to bring their best ideas to life. Their goal is to create uniquely beautiful high quality videos, photos, and social projects. Through the creation of their projects they want to popularize low-budget filmmaking and photography among ukrainians')
+    meta(itemprop="image", content="http://www.koza-team.com/images/profile.png")
+    meta(property="og:image", content="http://www.koza-team.com/images/profile.png")
     meta(name='viewport', content='width=device-width, initial-scale=1, minimal-ui')
     include favicons.jade
-    title KOZA team
+    title KOZA Creative Group
     // build:css styles/vendor.css
     // bower:css
     link(rel='stylesheet', href='../bower_components/normalize.css/normalize.css')
@@ -24,14 +26,19 @@ html
       | Please <a href="http://browsehappy.com/">upgrade your browser</a>
       | to improve your experience.
     <![endif]-->
-    div
+    div(itemscope, itemtype="http://schema.org/Organization")
+      span(itemprop='name', style='display:none') KOZA Creative Group
+      span(itemprop='description', style='display:none')
+        | Group of artists working together to bring their best ideas to life. Their goal is to create uniquely beautiful high quality videos, photos, and social projects. Through the creation of their projects they want to popularize low-budget filmmaking and photography among ukrainians
+      img(itemprop='image', style='display:none', src='http://www.koza-team.com/images/profile.png')
+
       section.hero(data-scroll-index="0")
         include sections/home/home.jade
       section.portfolio(data-scroll-index="1")
         include sections/projects/projects.jade
       section.team(data-scroll-index="2")
         include sections/team/team.jade
-      section.team(data-scroll-index="3")
+      section.contact(data-scroll-index="3")
         include sections/contact/contact.jade
     div.overpage(for="marta")
       include pages/projects/marta/marta.jade
@@ -40,12 +47,13 @@ html
     div.overpage(for="olja")
       include pages/projects/olja/olja.jade
     script.
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58443836-1', 'auto');
+      ga('send', 'pageview');
 
     // build:js scripts/vendor.js
     // bower:js
@@ -59,4 +67,5 @@ html
 
     // build:js scripts/main.js
     script(src="scripts/main.js")
+    script(type="text/javascript" src="scripts/share42.js")
     // endbuild

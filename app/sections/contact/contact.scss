@@ -1,5 +1,10 @@
 $contact-fb-height: 25rem;
 
+section.contact {
+  height: 100vh;
+  padding-bottom:1px;
+}
+
 .contact-fb {
   background-image: url('../images/follow_facebook.png');
   background-size: cover;
@@ -32,12 +37,12 @@ $contact-fb-height: 25rem;
 }
 
 .contact-us {
-  margin: 10rem 0;
+  margin: 10rem 0 0 0;
   text-align: center;
   color: $active-color;
 
   @media (min-width: 550px) {
-    margin: 15rem 0;
+    margin: 15rem 0 0 0;
   }
 }
 

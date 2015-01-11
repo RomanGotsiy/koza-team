@@ -56,6 +56,10 @@ a:hover, a:active {
   color: $active-color;
 }
 
+//remove outline in firefox
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -65,11 +69,11 @@ a:hover, a:active {
 
 
 section {
-  min-height: 100vh;
+  //min-height: 100vh;
   position: relative;
 
-  &:not(:first-child) {
-    margin-top:5rem;
+  &:not(:last-child) {
+    margin-bottom:5rem;
   }
 }
 

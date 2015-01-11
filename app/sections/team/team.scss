@@ -14,12 +14,6 @@ $member-height: 20rem;
 
   @include hover-fade();
 
-  &:hover {
-    .moving-element {
-      padding-top: 0.5rem;
-    }
-  }
-
   @media (min-width: 1600px) {
     $member-height: 25rem;
     height: $member-height;

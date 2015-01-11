@@ -30,7 +30,7 @@ gulp.task('injectSass', function () {
 });
 
 gulp.task('jshint', function () {
-  return gulp.src('app/scripts/**/*.js')
+  return gulp.src(['app/scripts/**/*.js', '!app/scripts/share42.js'])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.jshint.reporter('fail'));
@@ -146,7 +146,7 @@ gulp.task('deploy', function () {
 });
 
 gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+  return gulp.src(['dist/**/*', '!app/scripts/share42.js']).pipe($.size({title: 'build', gzip: true}));
 });
 
 gulp.task('default', ['clean'], function () {
