@@ -19,8 +19,11 @@
 
       var targets = {
         default: function () {
+          var videoWrap = $('.opened .video-wrapper');
           setTimeout(function() {
             $('.overpage').removeClass('opened');
+            var iframe = videoWrap.children().first();
+            iframe.detach().appendTo(videoWrap);
           }, 50);
           $('body').removeClass('overpaged');
         },
