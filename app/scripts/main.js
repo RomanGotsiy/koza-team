@@ -26,6 +26,10 @@
             iframe.detach().appendTo(videoWrap);
           }, 50);
           $('body').removeClass('overpaged');
+
+          //send google analitic pageview
+          ga('set', 'page', '/');
+          ga('send', 'pageview');
         },
         project: function (request) {
           var proj = request.namedParams.projname;
@@ -33,6 +37,8 @@
             $('.overpage[for="'+proj+'"]').addClass('opened');
           }, 50);
           $('body').addClass('overpaged');
+          ga('set', 'page', '/projects/' + proj);
+          ga('send', 'pageview');
         },
       };
 
