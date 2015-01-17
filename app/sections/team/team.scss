@@ -25,7 +25,8 @@ $member-height: 20rem;
   background-repeat: no-repeat;
   background-position: center;
   color: #ffffff;
-
+  background-color: #959595;
+  
   .name {
     font-size: 3rem;
     line-height: 0.8;
@@ -59,6 +60,18 @@ $member-height: 20rem;
 
   &.member-gotsiy {
     background-image: url('../images/members/gotsiy.jpg')
+  }
+
+  &.member-lupul {
+    background-image: url('../images/members/lupul.jpg')
+  }
+  
+  &.member-next {
+    .member-info {
+      margin-left: 0 !important;
+      width: 100% !important;
+      text-align: center;
+    }
   }
 }
 
