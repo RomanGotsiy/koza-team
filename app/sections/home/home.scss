@@ -12,6 +12,48 @@ $slider-button-height: 10rem;
   margin: 0 auto;
 }
 
+.page-descr-wrapper div {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 1rem 2rem;
+}
+
+.page-descr-wrapper {
+  display: table;
+  margin-bottom: 10rem;
+}
+
+.nice-to-meet {
+  width: 25%;
+  text-align: right;
+  font-size: 2rem;
+  border-right: 2px solid $contrast-color;
+}
+
+.site-description {
+  //font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .page-descr-wrapper div {
+    display: block;
+  }
+  
+  .page-descr-wrapper {
+    display: block;
+    margin-bottom: 10rem;
+    text-align: center;
+  }
+  
+  .nice-to-meet {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 2px solid $contrast-color;
+    border-right: none;
+  }
+}
+
 .main-nav {
   width: 100%;
   text-align: center;
