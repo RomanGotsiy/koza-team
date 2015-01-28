@@ -46,11 +46,11 @@ $slider-button-height: 10rem;
   }
   
   .nice-to-meet {
-    width: 100%;
+    width: auto;
     text-align: center;
     font-size: 2rem;
-    border-bottom: 2px solid $contrast-color;
-    border-right: none;
+    display: inline-block !important;
+    white-space: nowrap;
   }
 }
 

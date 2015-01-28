@@ -17,10 +17,10 @@ $section-header-radius: 10rem;
 @import 'slick';
 
 // injector
-@import '../sections/contact/contact.scss';
 @import '../sections/home/home.scss';
 @import '../sections/projects/projects.scss';
 @import '../sections/team/team.scss';
+@import '../sections/contact/contact.scss';
 @import '../pages/projects/projects.scss';
 // endinjector
 
