@@ -9,6 +9,7 @@ $project-inprogress-radius: 6rem;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  float: none;
 
   @include hover-fade();
 
@@ -47,6 +48,12 @@ $project-inprogress-radius: 6rem;
   @extend .project;
 
   background-image: url('../images/project_olja_bg.jpg');
+}
+
+.project-bread {
+  @extend .project;
+
+  background-image: url('../images/project_bread_bg.jpg');
 }
 
 .project-inprogress {
